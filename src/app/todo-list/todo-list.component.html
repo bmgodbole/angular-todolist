@@ -1,0 +1,9 @@
+<div class="container">
+    <h3>ToDo List</h3>
+    <input type = "text" [(ngModel)]="newTaskText" placeholder="Add new task">
+    <button (click)="addTask()">Add Task</button>
+    <ul>
+        <li *ngFor="let task of tasks" [class.completed]="task.completed" (click)="toggleTask(task)">{{task.text}}</li>
+    </ul>
+</div>
+
